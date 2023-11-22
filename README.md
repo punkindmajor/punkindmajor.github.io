@@ -11,7 +11,7 @@ There are two main reasons why researching FashionMNIST might be more favorable 
 * The MNIST dataset is too easy for most of mordern large models, for example, CNN can reach 99.7% on MNIST with reasonable optimization
 * The MNIST is not siutable for some state-of-the-art CV technique, some method might work well on MNIST but does not transfer to real CV data.
   
-### A Quick Overview on FashionMNIST ###
+### A Quick Overview on FashionMNIST 
 As mentioned above, FashionMNIST consists of ten classes of apperals, labeled 0~9 corresponding to:
 **T-shirt/top, Trouser, Pullover, Dress, Coat,Sandal, Shirt, Sneaker, Bag, Ankle boot.**
 
@@ -20,9 +20,9 @@ And the dataset is separated into two sets, training set and testing set, consis
 Here are some example image from FashionMNIST
 ![example](/Example_images.png)
 
-### Dimensionality Reduction ###
+### Dimensionality Reduction 
 All the images are all flattend into one vector of size 784, with each pixel represening one dimension. The grayscale value of each pixel is treated as one feature. Thus the shape of resulting dataset becomes (784,60000) . We applied both PCA and t-SNE on the training set, with the vision to finding out if there is any underlying pattern among classes.
-#### PCA ####
+#### PCA 
 Here are the visualization of the resulting dataset in 3-D vector space via different view angle.
 <p align="center">
 <img width="400" height="300" src="/PCA.png">
@@ -30,7 +30,7 @@ Here are the visualization of the resulting dataset in 3-D vector space via diff
 <img width="400" height="300" src="/pca_1.png">
 </p>
 
-#### t-SNE ####
+#### t-SNE
 And here are the result of t-SNE with different perplexity p = 3,20,50,100
 <p align="center">
 <img width="300" height="200" src="/t-SNE_p=3.png">
@@ -39,6 +39,6 @@ And here are the result of t-SNE with different perplexity p = 3,20,50,100
 <img width="300" height="200" src="/t-SNE_p=100.png">
 </p>
 
-#### Observation from Dimensionality ####
+#### Observation from Dimensionality 
 It is quite astonishing that at the first thought, one may think that flattening images and representing feature as grayscale value do not make to much sence, for the spatial imformation may be severly harmed during the flattened process. 
 Yet the resulting scatter plot shows quite the opposite. Althouhg not perfectly separable, we can still recognize the existence of clustering of same class.
