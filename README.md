@@ -10,12 +10,15 @@ Like the MNIST dataset, ten classes of grayscale images are included. Unlike the
 There are two main reasons why researching FashionMNIST might be more favorable comparing to keep using MNIST:
 * The MNIST dataset is too easy for most of mordern large models, for example, CNN can reach 99.7% on MNIST with reasonable optimization
 * The MNIST is not siutable for some state-of-the-art CV technique, some method might work well on MNIST but does not transfer to real CV data.
-### A quick overview on FashionMNIST ###
+  
+### A Quick Overview on FashionMNIST ###
 As mentioned above, FashionMNIST consists of ten classes of apperals, labeled 0~9 corresponding to:
 **T-shirt/top, Trouser, Pullover, Dress, Coat,Sandal, Shirt, Sneaker, Bag, Ankle boot.**
 
-And the dataset is separated into two sets, training set and testing set, consists of 60000 and 10000 images respectively.The distribution of Classes on either sets are perfectly balanced,
+And the dataset is separated into two sets, training set and testing set, consists of 60000 and 10000 images respectively. The dataset is balanced among all classed, where 6000 images for each class in the training set, and 1000 images for each class in the testing set.
+
 Here are some example image from FashionMNIST
 ![example](/Example_images.png)
 
 ### Dimensionality Reduction ###
+We applied both PCA and t-SNE on the training set, with the vision to finding out if there is any underlying pattern among classes. We treated each 28*28 grayscale image as one flattended vector
