@@ -25,11 +25,17 @@ All the images are all flattend into one vector of size 784, with each pixel rep
 #### PCA ####
 Here are the visualization of the resulting dataset in 3-D vector space via different view angle.
 <p align="center">
-<img width="250" height="250" src="/PCA.png">
+<img width="400" height="300" src="/PCA.png">
 <img width="400" height="300" src="/pca_2.png">
 <img width="400" height="300" src="/pca_1.png">
 </p>
 
 #### t-SNE ####
-
+And here are the result of t-SNE with different perplexity p = 3,20,50,100
+<p align="center">
+<img width="300" height="200" src="/t-SNE_p=3.png">
+<img witdh="300" height="200" src="/t-SNE_p=20.png">
+<img width="300" height="200" src="/t-SNE_p=50.png">
+<img width="300" height="200" src="/t-SNE_p=100.png">
+</p>
 
