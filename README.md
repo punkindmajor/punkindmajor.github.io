@@ -39,6 +39,6 @@ And here are the result of t-SNE with different perplexity p = 3,20,50,100
 <img width="300" height="200" src="/t-SNE_p=100.png">
 </p>
 
-#### Observation from Dimensionality 
+#### Observation from Dimensionality Reduction
 It is quite astonishing that at the first thought, one may think that flattening images and representing feature as grayscale value do not make to much sence, for the spatial imformation may be severly harmed during the flattened process. 
 Yet the resulting scatter plot shows quite the opposite. Althouhg not perfectly separable, we can still recognize the existence of clustering of same class.
