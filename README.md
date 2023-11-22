@@ -31,7 +31,7 @@ Here are the visualization of the resulting dataset in 3-D vector space via diff
 </p>
 
 #### t-SNE
-And here are the result of t-SNE with different perplexity p = 3,20,50,100
+And here are the results of t-SNE with different perplexity p = 3,20,50,100
 <p align="center">
 <img width="300" height="200" src="/t-SNE_p=3.png">
 <img witdh="300" height="200" src="/t-SNE_p=20.png">
@@ -42,3 +42,11 @@ And here are the result of t-SNE with different perplexity p = 3,20,50,100
 #### Observation from Dimensionality Reduction
 It is quite astonishing that at the first thought, one may think that flattening images and representing feature as grayscale value do not make to much sence, for the spatial imformation may be severly harmed during the flattened process. 
 Yet the resulting scatter plot shows quite the opposite. Althouhg not perfectly separable, we can still recognize the existence of clustering of same class.
+
+## Classification
+### Model Selection
+When it comes to model selection, there are two main factors that have to be considered: Model Capability and Efficiency.
+There are four candidate: WideResNet50v2, VGG11, DenseNet121 and SqueezeNet1_0. According to the documentation of FashionMNIST, they all have similar performance in term fo accuracy.
+As for the effectiveness,  the squeezeNet has the least amount of variables, thus acheiving the best training efficiency among the options. Thus we pick squeezeNet as our backbone model.
+### Optimization 
+
