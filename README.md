@@ -28,6 +28,7 @@ Here are the visualization of the resulting dataset in 3-D vector space via diff
 <img width="250" height="250" src="/PCA.png">
 <img width="400" height="300" src="/pca_2.png">
 <img width="400" height="300" src="/pca_1.png">
+</p>
 
 #### t-SNE ####
 
