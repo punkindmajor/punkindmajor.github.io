@@ -39,3 +39,5 @@ And here are the result of t-SNE with different perplexity p = 3,20,50,100
 <img width="300" height="200" src="/t-SNE_p=100.png">
 </p>
 
+#### Observation from Dimensionality ####
+It is quite astonishing that at the first thought, one may think that flattened an image and treated grayscale as feature does not make to much sence, for the spatial imformation may be severly harmed during the flattened process. From the resulting scatter plot, althouhg not perfect, we can still recognize the existence of some degree of clustering.
