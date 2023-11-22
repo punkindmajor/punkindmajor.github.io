@@ -22,4 +22,13 @@ Here are some example image from FashionMNIST
 
 ### Dimensionality Reduction ###
 All the images are all flattend into one vector of size 784, with each pixel represening one dimension. The grayscale value of each pixel is treated as one feature. Thus the shape of resulting dataset becomes (784,60000) . We applied both PCA and t-SNE on the training set, with the vision to finding out if there is any underlying pattern among classes.
+#### PCA ####
+Here are the visualization of the resulting dataset in 3-D vector space via different view angle.
+<p align="center">
+<img width="250" height="250" src="/PCA.png">
+<img width="400" height="300" src="/pca_2.png">
+<img width="400" height="300" src="/pca_1.png">
+
+#### t-SNE ####
+
 
