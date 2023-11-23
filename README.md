@@ -62,13 +62,16 @@ The Adam and RMSProp optimizers were pit against each other with different learn
 
 ### Result
 In the end, the SqueezeNet model is trained with the Adam optimizer at 0.001 learning rate. This produced an accuracy of 92.49%. While below average compared with the recorded scores for the models provided in the FashionMNIST site, the model performed very well for all classes except for class 6, the shirts class. This class is often confused as a T-Shirt, pullover, dress, or coat 23% of the time. And we actually predict this in the data exploration section, where class 6 widely spreads among class 0 and class 4.
+
 <p align="center">
 <img width="300" height="300" src="op0_lr0.01.png">
-<img width="300" height="300" src="op0_lr0.001.png">
-<img width="300" height="300" src="op0_lr0.0001.png">
 <img width="300" height="300" src="op1_lr0.01.png">
+<img width="300" height="300" src="op0_lr0.001.png">
 <img width="300" height="300" src="op1_lr0.001.png">
+<img width="300" height="300" src="op0_lr0.0001.png">
 <img width="300" height="300" src="op1_lr0.0001.png">
+(Confusion matric of different hyperparameters:First column uses Adam as optimizer, second uses RMSProp, and for top to bottom adopts learning rate of 0.1,0.01,0.001 respectively)
+</p>
 
 ### Conclusion
 We developed a classifier to categorize the FashionMNIST dataset. After selecting a baseline model, we fine tuned it and got above 90 accuracy. The majority of classifications are correct except for the shirt class, which is also supported by the PCA and T-SNE analysis. Developing models with better separability for specific cases in this dataset would be possible grounds for further work.
