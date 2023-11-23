@@ -49,6 +49,7 @@ classes.
 ### Model Selection
 When it comes to model selection, there are two main factors that have to be considered: Model Capability and Efficiency.
 There are four candidate: WideResNet50v2, VGG11, DenseNet121 and SqueezeNet1_0. According to the documentation of FashionMNIST, they all have similar performance in term fo accuracy.
+<img width="300" height="200" src="/squeeze.png">
 As for the effectiveness,  the squeezeNet has the least amount of variables, thus acheiving the best training efficiency among the options. Thus we pick squeezeNet as our backbone model.
 ### Optimization 
 The Adam and RMSProp optimizers were pit against each other with different learning rates to fine tune for the best possible model that can be used for this application. The fine tuning method used is 6-fold cross validation. 6 different models set to each possible combination of hyperparameters is used in the algrorithm, and test accuracy is used for the scoring.
