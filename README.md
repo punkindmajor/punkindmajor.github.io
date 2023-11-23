@@ -50,16 +50,23 @@ classes.
 When it comes to model selection, there are two main factors that have to be considered: Model Capability and Efficiency.
 There are four candidate: WideResNet50v2, VGG11, DenseNet121 and SqueezeNet1_0. According to the documentation of FashionMNIST, they all have similar performance in term fo accuracy.
 <p align="center">
-<img width="800" height="400" src="/Squeeze.png">
+<img width="782" height="155" src="/Squeeze.png">
 </p>
 <p align='center'>
 (A general Structure of SqueezeNet)
 </p>
+
 As for the effectiveness,  the squeezeNet has the least amount of variables, thus acheiving the best training efficiency among the options. Thus we pick squeezeNet as our backbone model.
 ### Optimization 
 The Adam and RMSProp optimizers were pit against each other with different learning rates to fine tune for the best possible model that can be used for this application. The fine tuning method used is 6-fold cross validation. 6 different models set to each possible combination of hyperparameters is used in the algrorithm, and test accuracy is used for the scoring.
+
 ### Result
 In the end, the SqueezeNet model is trained with the Adam optimizer at 0.001 learning rate. This produced an accuracy of 92.49%. While below average compared with the recorded scores for the models provided in the FashionMNIST site, the model performed very well for all classes except for class 6, the shirts class. This class is often confused as a T-Shirt, pullover, dress, or coat 23% of the time. And we actually predict this in the data exploration section, where class 6 widely spreads among class 0 and class 4.
+<p align="center">
+<img width="300" height="300" src="op0_lr0.01.png">
+<img width="300" height="300" src="op0_lr0.001.png">
+<img width="300" height="300" src="op0_lr0.0001.png">
+
 ### Conclusion
 We developed a classifier to categorize the FashionMNIST dataset. After selecting a baseline model, we fine tuned it and got above 90 accuracy. The majority of classifications are correct except for the shirt class, which is also supported by the PCA and T-SNE analysis. Developing models with better separability for specific cases in this dataset would be possible grounds for further work.
 
