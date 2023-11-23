@@ -70,8 +70,10 @@ In the end, the SqueezeNet model is trained with the Adam optimizer at 0.001 lea
 <img width="300" height="300" src="op1_lr0.001.png">
 <img width="300" height="300" src="op0_lr0.0001.png">
 <img width="300" height="300" src="op1_lr0.0001.png">
-(Confusion matric of different hyperparameters:First column uses Adam as optimizer, second uses RMSProp, and for top to bottom adopts learning rate of 0.1,0.01,0.001 respectively)
 </p>
+
+(Confusion matrix of different hyperparameters:First column uses Adam as optimizer, second uses RMSProp, and for top to bottom adopts learning rate of 0.1 ,0.01, 0.001 respectively)
+
 
 ### Conclusion
 We developed a classifier to categorize the FashionMNIST dataset. After selecting a baseline model, we fine tuned it and got above 90 accuracy. The majority of classifications are correct except for the shirt class, which is also supported by the PCA and T-SNE analysis. Developing models with better separability for specific cases in this dataset would be possible grounds for further work.
