@@ -57,10 +57,12 @@ There are four candidate: WideResNet50v2, VGG11, DenseNet121 and SqueezeNet1_0. 
 </p>
 
 As for the effectiveness,  the squeezeNet has the least amount of variables, thus acheiving the best training efficiency among the options. Thus we pick squeezeNet as our backbone model.
-### Optimization 
-The Adam and RMSProp optimizers were pit against each other with different learning rates to fine tune for the best possible model that can be used for this application. The fine tuning method used is 6-fold cross validation. 6 different models set to each possible combination of hyperparameters is used in the algrorithm, and test accuracy is used for the scoring.
 
-### Result
+### Optimization and Hyperparameter Tuning
+Two optimizers were consider: Adam and RMSProp, which have both been proved to be suitable for image classification task. 
+In order to find the best learning ratet and optimizer, we compapred the result using different combination of optimizers and learning rate, whichever wins will be used to train the final version of our classifier. During the competition, we also applied 6-fold cross validation to obtain a more robust conclusion.
+The resulting confusion matrix are shown in the figures below.
+
 In the end, the SqueezeNet model is trained with the Adam optimizer at 0.001 learning rate. This produced an accuracy of 92.49%. While below average compared with the recorded scores for the models provided in the FashionMNIST site, the model performed very well for all classes except for class 6, the shirts class. This class is often confused as a T-Shirt, pullover, dress, or coat 23% of the time. And we actually predict this in the data exploration section, where class 6 widely spreads among class 0 and class 4.
 
 <p align="center">
